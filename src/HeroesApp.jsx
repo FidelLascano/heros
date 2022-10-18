@@ -1,7 +1,11 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import { AppRouter } from './router/AppRouter'
 
 export const HeroesApp = () => {
   return (
-    <div>HeroesApp</div>
+    <BrowserRouter>
+      <AppRouter/>
+    </BrowserRouter>
   )
 }
