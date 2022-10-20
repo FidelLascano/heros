@@ -1,8 +1,8 @@
 import React from 'react'
 import { Navigate, Routes, Route } from 'react-router-dom'
 import { Navbar } from '../ui/components/Navbar'
-import { DcPage } from '../heros/pages/DcPage'
-import { MarvelPage } from '../heros/pages/MarvelPage'
+import { DcPage, MarvelPage } from '../heros/pages'
+
 
 export const AppRouter = () => {
   return (
