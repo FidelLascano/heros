@@ -7,15 +7,16 @@ export const Navbar = () => {
             
             <Link 
                 className="navbar-brand" 
-                to="/"
+                to="/heros"
             >
                 Asociaciones
             </Link>
 
             <div className="navbar-collapse">
                 <div className="navbar-nav">
-                    <NavLink className={({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''}`} to="/marvel"> Marvel </NavLink>
-                    <NavLink className={({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''}`} to="/dc"> DC </NavLink>
+                    <NavLink className={({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''}`} to="/heros/marvel"> Marvel </NavLink>
+                    <NavLink className={({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''}`} to="/heros/dc"> DC </NavLink>
+                    <NavLink className={({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''}`} to="/heros/search"> Search </NavLink>
                 </div>
             </div>
 
