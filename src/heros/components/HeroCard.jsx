@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
 
 const CharacterByHero = ({characters, alter_ego}) => 
@@ -10,10 +10,13 @@ const CharacterByHero = ({characters, alter_ego}) =>
 }
 
 export const HeroCard = ({ id, superhero, alter_ego, first_appearance, characters, publisher, }) => {
+    const [classEfect, setClassEfect] = useState("");
     const heroImageUrl = `../src/assets/img/heroes/${id}.jpg`;
+    const mouseEnter = (animatedClass) => setClassEfect(animatedClass);
+
     return (
         <>
-            <div className="col">
+            <div className={`col ${classEfect}`} onMouseOver={()=>mouseEnter("animate__animated animate__bounce")} onMouseLeave={()=>mouseEnter("")}>
                 <div className='card'>
                     <div className='row no-gutters'>
                         <div className='col-4'>
