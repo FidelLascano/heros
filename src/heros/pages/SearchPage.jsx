@@ -49,8 +49,8 @@ export const SearchPage = () => {
                 <div className="col-7">
                     <h4>Result</h4>
                     <hr/>
-                    <div className={"alert alert-primary"} style={{display: isSearch?'none':'block'}}>Search a Hero with {q}</div>
-                    <div className={"alert alert-danger"} style={{display: hasHeros?'block':'none'}}>Not a Hero with <b>{q}</b></div>
+                    <div className={"alert alert-primary animate__animated animate__flash"} style={{display: isSearch?'none':'block'}}>Search a Hero with {q}</div>
+                    <div className={"alert alert-danger animate__animated animate__bounceInDown"} style={{display: hasHeros?'block':'none'}}>Not a Hero with <b>{q}</b></div>
                     {heros.map(hero=>(<HeroCard key={hero.id} {...hero}/>))}
                 </div>
             </div>
