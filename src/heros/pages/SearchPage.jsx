@@ -51,7 +51,9 @@ export const SearchPage = () => {
                     <hr/>
                     <div className={"alert alert-primary animate__animated animate__flash"} style={{display: isSearch?'none':'block'}}>Search a Hero with {q}</div>
                     <div className={"alert alert-danger animate__animated animate__bounceInDown"} style={{display: hasHeros?'block':'none'}}>Not a Hero with <b>{q}</b></div>
+                    <div className='row rows-cols-1 row-cols-md-2 g-2'>
                     {heros.map(hero=>(<HeroCard key={hero.id} {...hero}/>))}
+                    </div>
                 </div>
             </div>
         </>
