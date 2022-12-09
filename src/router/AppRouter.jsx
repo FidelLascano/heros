@@ -1,6 +1,5 @@
 import React from 'react'
 import { Navigate, Routes, Route } from 'react-router-dom'
-import { Navbar } from '../ui/components/Navbar'
 import { HerosRoutes} from '../heros'
 import { LoginPage } from '../auth'
 
