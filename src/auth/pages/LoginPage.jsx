@@ -17,11 +17,13 @@ export const LoginPage = () => {
 
 const onLogin = (event) => {
   event.preventDefault();
-  if(username && username.length > 0) 
+  if(username && username.length > 0)
   {
     const id = v4()
     login(username, id);
-    navigate('/heros', {replace: true});
+    const lastLocation = localStorage.getItem("lastLocation");
+    const goLocation = lastLocation || '/heros';
+    navigate(goLocation, {replace: true});
   }
 }
 
