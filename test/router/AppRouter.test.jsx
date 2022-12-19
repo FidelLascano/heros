@@ -15,7 +15,7 @@ describe("Test AuthRouteer", ()=>{
                 </MemoryRouter>
             </AuthContext.Provider>
         )
-        expect(screen.getAllByText('Login').length).toBeGreaterThan(1);
+        expect(screen.getAllByText('Login').length).toBeGreaterThan(0);
         done();
     })
 
@@ -34,7 +34,7 @@ describe("Test AuthRouteer", ()=>{
             </AuthContext.Provider>
         )
 
-        expect(screen.getAllByText('Marvel Page').length).toBeGreaterThan(1);
+        expect(screen.getAllByText('Marvel Page').length).toBeGreaterThanOrEqual(1);
         done();
     })
 })
