@@ -12,7 +12,7 @@ export const SearchPage = () => {
 
     const {q = ''} = queryString.parse(location.search);
     const heros = getHerosBySearchText(q);
-    const {searchText, onInputChange} = useForm({searchText:""});
+    const {searchText, onInputChange} = useForm({searchText:q});
     const isSearch =  (q.length > 0 );
     const hasHeros =  (q.length > 0 && heros.length < 1 );
     const onSearchSubmit = (event) => {
@@ -31,7 +31,7 @@ export const SearchPage = () => {
                 <div className="col-5">
                     <h4>Searching</h4>
                     <hr/>
-                    <form onSubmit={onSearchSubmit}>
+                    <form onSubmit={onSearchSubmit} data-testid={"searh-from-test"}>
                         <input
                             type="text"
                             placeholder={"Search Hero"}
@@ -49,8 +49,8 @@ export const SearchPage = () => {
                 <div className="col-7">
                     <h4>Result</h4>
                     <hr/>
-                    <div className={"alert alert-primary animate__animated animate__flash"} style={{display: isSearch?'none':'block'}}>Search a Hero with {q}</div>
-                    <div className={"alert alert-danger animate__animated animate__bounceInDown"} style={{display: hasHeros?'block':'none'}}>Not a Hero with <b>{q}</b></div>
+                    <div className={"alert alert-primary animate__animated animate__flash"} style={{display: isSearch?'none':'block'}} data-testid="div-search-hero">Search a Hero with {q}</div>
+                    <div className={"alert alert-danger animate__animated animate__bounceInDown"} style={{display: hasHeros?'block':'none'}} data-testid={"div-not-search-hero"}>Not a Hero with <b>{q}</b></div>
                     <div className='row rows-cols-1 row-cols-md-2 g-2'>
                     {heros.map(hero=>(<HeroCard key={hero.id} {...hero}/>))}
                     </div>
