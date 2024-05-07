@@ -12,7 +12,7 @@ export const HeroPage = () => {
       const page = id.split("-")[0];
       navigate(`/heros/${page}`);
   }
-  const heroImageUrl = `/assets/img/heroes/${id}.jpg`;
+  const heroImageUrl = `./assets/img/heroes/${id}.jpg`;
   return (
       <div className={"row mt-5"}>
         <div className={"col-4"}>
