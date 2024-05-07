@@ -11,7 +11,7 @@ const CharacterByHero = ({characters, alter_ego}) =>
 
 export const HeroCard = ({ id, superhero, alter_ego, first_appearance, characters, publisher, }) => {
     const [classEfect, setClassEfect] = useState("");
-    const heroImageUrl = `../src/assets/img/heroes/${id}.jpg`;
+    const heroImageUrl = `/assets/img/heroes/${id}.jpg`;
     const mouseEnter = (animatedClass) => setClassEfect(animatedClass);
 
     return (
